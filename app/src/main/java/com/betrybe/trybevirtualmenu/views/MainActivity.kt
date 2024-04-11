@@ -11,7 +11,7 @@ import com.betrybe.trybevirtualmenu.models.TrybeMenuDataBase
 
 class MainActivity : AppCompatActivity() {
 
-    private val dishesList: RecyclerView by lazy { findViewById(R.id.main_linear_container) }
+    private val dishesList: RecyclerView by lazy { findViewById(R.id.main_menu) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

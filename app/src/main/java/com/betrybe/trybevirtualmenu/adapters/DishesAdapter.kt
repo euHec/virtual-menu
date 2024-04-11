@@ -3,6 +3,7 @@ package com.betrybe.trybevirtualmenu.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
@@ -13,14 +14,14 @@ class DishesAdapter (val dishes: List<Dishes>): Adapter<DishesAdapter.DishViewHo
 
     class DishViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val name = view.findViewById<TextView>(R.id.item_menu_name)
-        val image = view.findViewById<TextView>(R.id.item_menu_image)
+        val image = view.findViewById<ImageView>(R.id.item_menu_image)
     }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): DishesAdapter.DishViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_menu_card_view, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_menu_layout, parent, false)
         return DishViewHolder(view)
     }
 
