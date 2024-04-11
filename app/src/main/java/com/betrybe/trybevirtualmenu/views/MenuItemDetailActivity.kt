@@ -1,6 +1,7 @@
 package com.betrybe.trybevirtualmenu.views
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,8 @@ import com.betrybe.trybevirtualmenu.R
 import com.betrybe.trybevirtualmenu.models.TrybeMenuDataBase
 
 class MenuItemDetailActivity : AppCompatActivity() {
+
+    private val backButton: Button by lazy { findViewById(R.id.detail_back) }
     private val name: TextView by lazy { findViewById(R.id.detail_name)  }
     private val image: ImageView by lazy { findViewById(R.id.detail_image)  }
     private val description: TextView by lazy { findViewById(R.id.detail_description)  }
@@ -27,5 +30,7 @@ class MenuItemDetailActivity : AppCompatActivity() {
             append("R$")
             append(dish.price.toString())
         }
+
+        backButton.setOnClickListener { finish() }
     }
 }
